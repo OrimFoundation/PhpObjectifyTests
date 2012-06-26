@@ -1,0 +1,6 @@
+#ignoring PHPStorm
+.idea
+
+#merge files
+*.orig
+
