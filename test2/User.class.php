@@ -18,6 +18,27 @@ class User
     protected $userActivationDateTime;
 
     /**
+     * Method setting up properties with given data
+     *
+     * @param array $data
+     *
+     * @return bool
+     */
+    public function load(array $data)
+    {
+
+        $this->__set('userId', $data['userId']);
+
+        $this->__set('userName', $data['userName']);
+        $this->__set('userPassword', $data['userPassword']);
+        $this->__set('userRegistrationTs', $data['userRegistrationTs']);
+        $this->__set('userActivationDateTime', $data['userActivationDateTime']);
+
+        return true;
+
+    }
+
+    /**
      * @param string $propertyName
      *
      * @return mixed

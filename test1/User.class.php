@@ -17,6 +17,25 @@ class User
 
     public $userActivationDateTime;
 
+    /**
+     * Method setting up properties with given data
+     *
+     * @param array $data
+     *
+     * @return bool
+     */
+    public function load(array $data)
+    {
+
+        $this->userId                 = $data['userId'];
+        $this->userName               = $data['userName'];
+        $this->userPassword           = $data['userPassword'];
+        $this->userRegistrationTs     = $data['userRegistrationTs'];
+        $this->userActivationDateTime = $data['userActivationDateTime'];
+
+        return true;
+
+    }
 }
 
 ?>

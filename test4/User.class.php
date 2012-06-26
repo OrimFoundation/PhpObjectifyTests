@@ -17,6 +17,25 @@ class User
 
     protected $userActivationDateTime;
 
+    /**
+     * Method setting up properties with given data
+     *
+     * @param array $data
+     *
+     * @return bool
+     */
+    public function load(array $data)
+    {
+
+        $this->setUserId($data['userId']);
+        $this->setUserName($data['userName']);
+        $this->setUserPassword($data['userPassword']);
+        $this->setUserRegistrationTs($data['userRegistrationTs']);
+        $this->setUserActivationDateTime($data['userActivationDateTime']);
+
+        return true;
+
+    }
 
     public function setUserActivationDateTime($userActivationDateTime)
     {
